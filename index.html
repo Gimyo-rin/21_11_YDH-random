@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		body{
+			background-color: #0d0d0d;
+			background-size: cover;
+		}
+		.lotus{
+			position: absolute;left: 0; top: 0;
+			animation: water 3s ease-in-out infinite alternate;}
+		@keyframes water{from{top: 350px;} to{top: 330px;}}
+		}
+	</style>
+</head>
+<body>
+	
+	<script type="text/javascript">
+
+	var a = ["lotus1","lotus2","lotus3","lotus4","lotus5","lotus6","lotus7"];
+
+	for(var i=0;i<10;i++){
+		var t = document.createElement("img");
+		t.src = a[randomBH(0,6)] + ".png";
+		t.className = "lotus";
+		t.style.width = randomBH(50,200) + "px";
+		t.style. height = "auto";
+		t.style.left = Math.random()*screen.availWidth-200 + "px";
+		t.style.top = Math.random()*screen.availWidth-700 + "px";
+		document.body.appendChild(t);
+	}	
+
+		function randomBH(min, max) {
+		  min = Math.ceil(min);
+		  max = Math.floor(max);
+		  return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+	</script>
+</body>
+</html>
